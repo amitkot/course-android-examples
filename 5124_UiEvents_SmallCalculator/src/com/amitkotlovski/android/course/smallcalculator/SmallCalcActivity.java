@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.amitkotlovski.android.course.smallcalculator.R;
 
-public class MainActivity extends Activity {
+public class SmallCalcActivity extends Activity {
 
 	protected EditText mInput;
 	protected Button mCalculate;
@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 				int res = number + 66;
 				mResult.setText(String.valueOf(res));
 				} catch (NumberFormatException nfe) {
-					Toast.makeText(MainActivity.this, "Please insert a number", Toast.LENGTH_LONG).show();
+					Toast.makeText(SmallCalcActivity.this, "Please insert a number", Toast.LENGTH_LONG).show();
 					mInput.setText("");
 				}
 			}

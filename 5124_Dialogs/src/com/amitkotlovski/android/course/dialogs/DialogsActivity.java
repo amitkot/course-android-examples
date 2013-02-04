@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class DialogsActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						Toast.makeText(MainActivity.this,
+						Toast.makeText(DialogsActivity.this,
 								"What's there to think about?",
 								Toast.LENGTH_SHORT).show();
 					}
@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						Toast.makeText(MainActivity.this, "Can I have both?",
+						Toast.makeText(DialogsActivity.this, "Can I have both?",
 								Toast.LENGTH_SHORT).show();
 						dialog.dismiss();
 					}
