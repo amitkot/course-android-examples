@@ -1,7 +1,5 @@
 package com.amitkotlovski.android.course.fruitdb;
 
-import com.amitkotlovski.android.course.fruitdb.data.Fruit;
-import com.amitkotlovski.android.course.fruitdb.data.FruitHanlder;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -18,7 +16,7 @@ public class FruitsActivity extends Activity {
 		setContentView(R.layout.activity_fruits);
 		mAllFruits = (TextView) findViewById(R.id.all_fruits);
 
-		FruitHanlder db = new FruitHanlder(this);
+		FruitData db = new FruitData(this);
 		insertFruits(db);
 
 		Cursor cursor = db.getAllFruits();
@@ -26,7 +24,7 @@ public class FruitsActivity extends Activity {
 		showFruits(cursor);
 	}
 
-	private void insertFruits(FruitHanlder db) {
+	private void insertFruits(FruitData db) {
 		Fruit someFruit = db.getFruit(1);
 		if (someFruit == null) {
 			db.addFruit(new Fruit("Banana", "sweet", 80.0));

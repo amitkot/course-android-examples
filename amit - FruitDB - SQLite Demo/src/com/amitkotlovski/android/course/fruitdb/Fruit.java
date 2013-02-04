@@ -1,4 +1,5 @@
-package com.amitkotlovski.android.course.fruitdb.data;
+package com.amitkotlovski.android.course.fruitdb;
+
 
 public class Fruit {
 	private int mId;
@@ -12,7 +13,7 @@ public class Fruit {
 		mTaste = taste;
 		mWeight = weight;
 	}
-	
+
 	public Fruit(String name, String taste, double weight) {
 		this(0, name, taste, weight);
 	}
