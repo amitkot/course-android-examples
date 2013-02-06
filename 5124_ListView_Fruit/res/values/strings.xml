@@ -4,5 +4,6 @@
     <string name="app_name">ListViews</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="title_activity_enhanced_fruit_list">EnhancedFruitListActivity</string>
 
 </resources>

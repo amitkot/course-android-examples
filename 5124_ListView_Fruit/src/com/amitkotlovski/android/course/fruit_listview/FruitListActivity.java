@@ -13,10 +13,16 @@ import android.widget.Toast;
 
 public class FruitListActivity extends ListActivity {
 
+	protected ArrayAdapter<String> fruits;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
+		initList();
+	}
+	
+	private void initList() {
 		ArrayList<String> data = new ArrayList<String>();
 		data.add("Apple");
 		data.add("Banana");
@@ -29,7 +35,8 @@ public class FruitListActivity extends ListActivity {
 		data.add("Lychee");
 		data.add("Tomato");
 		data.add("Peach");
-		ArrayAdapter<String> fruits = new ArrayAdapter<String>(this,
+		
+		fruits = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, data);
 
 		setListAdapter(fruits);
