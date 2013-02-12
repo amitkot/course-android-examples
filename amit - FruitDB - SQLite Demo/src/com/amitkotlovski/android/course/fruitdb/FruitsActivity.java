@@ -25,8 +25,8 @@ public class FruitsActivity extends Activity {
 	}
 
 	private void insertFruits(FruitData db) {
-		Fruit someFruit = db.getFruit(1);
-		if (someFruit == null) {
+		Cursor cursor = db.getAllFruits();
+		if (!cursor.moveToFirst()) { // list is empty
 			db.addFruit(new Fruit("Banana", "sweet", 80.0));
 			db.addFruit(new Fruit("Apple", "sweet", 120.0));
 			db.addFruit(new Fruit("Grapefruit", "sour", 120.0));
