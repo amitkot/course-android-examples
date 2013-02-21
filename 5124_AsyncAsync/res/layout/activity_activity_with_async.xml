@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityWithAsync" >
+
+    <Button
+        android:id="@+id/waste_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Waste Time" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/waste_time"
+        android:layout_alignTop="@id/waste_time"
+        android:text="Stop" />
+    
+    <Button
+        android:id="@+id/responsive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waste_time"
+        android:layout_centerHorizontal="true"
+        android:text="Responsive" />
+
+    <ProgressBar
+        android:id="@+id/prog_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		style="@android:style/Widget.ProgressBar.Horizontal"        
+        android:layout_alignParentBottom="true"
+        
+        />
+
+    <TextView
+        android:id="@+id/prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/prog_bar"
+        android:layout_centerHorizontal="true"
+        android:text="no data yet" />
+
+</RelativeLayout>
