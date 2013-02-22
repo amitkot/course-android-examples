@@ -119,7 +119,7 @@ public class FruitData {
 		String whereTemplate = FruitContract.Fruits._ID + "=?";
 		String[] whereArgs = { String.valueOf(fruit.getId()) };
 		db.update(
-				FruitContract.Fruits.COLUMN_NAME_NAME,	// table name
+				FruitContract.Fruits.TABLE_NAME,		// table name
 				fruitValues,							// data to update
 				whereTemplate, 							// columns for the WHERE clause
 				whereArgs								// values for the WHERE clause
@@ -132,7 +132,7 @@ public class FruitData {
 		String whereClause = FruitContract.Fruits._ID + "=?";
 		String[] whereArgs = { String.valueOf(fruit.getId()) };
 		db.delete(
-				FruitContract.Fruits.COLUMN_NAME_NAME,	// table name
+				FruitContract.Fruits.TABLE_NAME,		// table name
 				whereClause,							// columns for the WHERE clause
 				whereArgs								// values for the WHERE clause
 				);
